@@ -1,9 +1,1 @@
-data/cifar-10-batches-py
-data/cifar-10-python.tar.gz
-
-models/tf/*
-models/torch/*
-
-tf_venv/
-torch_s_venv/
-torch_n_venv/
+installer.sh
