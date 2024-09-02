@@ -1,6 +1,6 @@
 # Cuda builder for Tensorflow and Pytorch.
 
-## LAST UPDATED: (07/23/2024)
+## LAST UPDATED: (09/01/2024)
 - There is currently no way for both Tensorflow and Torch to use the same cuda version and Python 3.12
 - If you would like to use the same cuda version for both, use Python 3.8-3.11 (Links for this install will be at the bottom)
 
@@ -17,11 +17,11 @@
 ### ❗❗❗DO NOT USE YAY OR GIT❗❗❗
 
 ##### My experiences from the first 10+ times using yay and git
-- 30 minutes gcc compile times ✅
-- Gcc overwrites ✅
+- 30+ minute gcc compile times ✅
+- Linker Errors ✅
+- Auto-updates & Version Mismatches ✅
 - Nvidia doesn't like you ✅
 - They actually hate you ✅
-- Auto-updates & Version Mismatches ✅
 
 ---
 
@@ -31,7 +31,7 @@ https://pytorch.org/get-started/locally/
 
 Version	            | Python version	| Compiler	    | Build tools	| cuDNN	 | CUDA
 | :----:            |    :----:         |        :----: |  :----:       |:----:  |:----:
-tensorflow-2.16.1	| 3.9-3.12	        | Clang 17.0.6	| Bazel 6.5.0	| 8.9	 | 12.3
+tensorflow-2.17.0	| 3.9-3.12	        | Clang 17.0.6	| Bazel 6.5.0	| 8.9	 | 12.3
 tensorflow-2.13.0	| 3.8-3.11	        |  Clang 16.0.0	| Bazel 5.3.0	| 8.6	 | 11.8
 Pytorch(Stable)	    |  3.8+             |  	            | 	            | 	     | 11.8, 12.1
 
