@@ -175,7 +175,15 @@ func (ap *AurPkg) download() error {
 }
 
 func (ap *AurPkg) check() (error, bool) {
-	pkg_name := strings.Split(ap.Name, "-")[0]
+	var pkg_name string
+	tmp := strings.Split(ap.Name, "-")
+
+	if tmp[1] == "libs" {
+		pkg_name = fmt.Sprintf("%s-%s", tmp[0], tmp[1])
+	} else {
+		pkg_name = tmp[0]
+	}
+
 	fmt.Printf("Checking if %s is installed...\n", pkg_name)
 
 	output, err := get_cmd("pacman", "-Q", pkg_name)
