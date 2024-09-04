@@ -1,18 +1,32 @@
 # Cuda builder for Tensorflow and Pytorch.
 
-## LAST UPDATED: (09/01/2024)
-- There is currently no way for both Tensorflow and Torch to use the same cuda version and Python 3.12
-- If you would like to use the same cuda version for both, use Python 3.8-3.11 (Links for this install will be at the bottom)
+## LAST UPDATED: (09/04/2024)
+* Finally made a script.
+* There is currently no way for both Tensorflow and Torch to use the same cuda version and Python 3.12
+* If you would like to use the same cuda version for both, use Python 3.8-3.11
+
+## Keeping the list updated
+* Submit a pull request chaning the [pacman_cuda.json](pacman_cuda.json)
+* Open an issue if you encounter any bugs with the script.
 
 ### Changes
 **Python 3.12 support**
-- New Script:
+- Script(Recent):
     - Installs cuda 12.3, the only cuda version supported for Tensorflow in Python 3.12.
     - For Torch, cuda has to be installed within the virtual environment. 
-- Old Script:
+- Script(Compatible):
     - Installs cuda 11.8, this is the last time Tensorflow and Torch shared a cuda version.
 
 ---
+
+## Script
+```sh
+curl -O https://raw.githubusercontent.com/cartersusi/pacman_cuda/install
+chmod +x install
+./install
+```
+
+## DIY
 
 ### ❗❗❗DO NOT USE YAY OR GIT❗❗❗
 
@@ -44,8 +58,6 @@ pip install torch torchvision torchaudio
 ```
 
 ---
-
-## Installing
 
 1. Update and download nvidia drivers ('nvidia' and 'nvidia-dkms' are interchangeable, no need to replace your 'nvidia' package if it is already installed)
 ```bash
