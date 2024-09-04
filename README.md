@@ -21,7 +21,7 @@
 
 ## Script
 ```sh
-curl -O https://raw.githubusercontent.com/cartersusi/pacman_cuda/install
+curl -O https://raw.githubusercontent.com/cartersusi/pacman_cuda/main/install
 chmod +x install
 ./install
 ```
