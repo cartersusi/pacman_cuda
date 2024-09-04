@@ -1,8 +1,8 @@
-# Cuda builder for Tensorflow and Pytorch.
+# Cuda Installer for Tensorflow and Pytorch.
 
 ## LAST UPDATED: (09/04/2024)
 * Finally made a script.
-* There is currently no way for both Tensorflow and Torch to use the same cuda version and Python 3.12
+* There is currently no way for both Tensorflow and Torch to use the same local cuda install and Python 3.12
 * If you would like to use the same cuda version for both, use Python 3.8-3.11
 
 ## Keeping the list updated
