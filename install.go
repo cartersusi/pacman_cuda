@@ -118,8 +118,8 @@ func (i *Installer) install() error {
 	}
 
 	var installs = make([]error, 2)
-	installs[0] = run_cmd("pacman", "-U", filepath.Join(TMP_DIR, i.GCC.Name), filepath.Join(TMP_DIR, i.GCCLibs.Name))
-	installs[1] = run_cmd("pacman", "-U", filepath.Join(TMP_DIR, i.Cuda.Name), filepath.Join(TMP_DIR, i.Cudnn.Name))
+	installs[0] = run_cmd("sudo", "pacman", "-U", filepath.Join(TMP_DIR, i.GCC.Name), filepath.Join(TMP_DIR, i.GCCLibs.Name))
+	installs[1] = run_cmd("sudo", "pacman", "-U", filepath.Join(TMP_DIR, i.Cuda.Name), filepath.Join(TMP_DIR, i.Cudnn.Name))
 
 	for _, err := range installs {
 		if err != nil {
