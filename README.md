@@ -90,6 +90,15 @@ IgnorePkg = cuda cudnn
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 ```
 
+### Common Docker error
+```sh
+sudo nvim /etc/nvidia-container-runtime/config.toml # change no-cgroups = false, save
+
+sudo systemctl restart docker
+sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+```
+
+
 
 ### Links for Cuda 11.8
 gcc11:
