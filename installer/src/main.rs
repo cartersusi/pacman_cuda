@@ -96,7 +96,7 @@ impl Data {
         let cmd = format!("sudo pacman -Syu {}", &self.deps);
         match run(&cmd, true) {
             Ok(output) => println!("Command output: {}", output),
-            Err(error) => eprintln!("{}", log(Lvl::Error, &format!("Failed to isntall dependencies: {}", error))),
+            Err(error) => eprintln!("{}", log(Lvl::Error, &format!("Failed to install dependencies: {}", error))),
         }
     }
 }
