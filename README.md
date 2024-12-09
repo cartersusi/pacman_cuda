@@ -5,7 +5,7 @@
 * If you would like to use the same cuda version for both, use Python 3.8-3.11
 
 ## Keeping the list updated
-* Submit a pull request chaning the [pacman_cuda.json](pacman_cuda.json)
+* Submit a pull request chaning the [packages.json](installer/src/data/packages.json)
 * Open an issue if you encounter any bugs with the script.
 
 ### Changes

@@ -7,7 +7,7 @@
             "name": "gcc12-12.3.0-6-x86_64.pkg.tar.zst",
             "link": "https://archive.archlinux.org/packages/g/gcc12/gcc12-12.3.0-6-x86_64.pkg.tar.zst"
         } ,
-        "gcc-libs": {
+        "gcc_libs": {
             "version": 12.3,
             "name":"gcc12-libs-12.3.0-6-x86_64.pkg.tar.zst",
             "link":"https://archive.archlinux.org/packages/g/gcc12-libs/gcc12-libs-12.3.0-6-x86_64.pkg.tar.zst"
@@ -30,7 +30,7 @@
             "name": "gcc11-11.3.0-5-x86_64.pkg.tar.zst",
             "link": "https://archive.archlinux.org/packages/g/gcc11/gcc11-11.3.0-5-x86_64.pkg.tar.zst"
         } ,
-        "gcc-libs": {
+        "gcc_libs": {
             "version": 11.3,
             "name":"gcc11-libs-11.3.0-5-x86_64.pkg.tar.zst",
             "link":"https://archive.archlinux.org/packages/g/gcc11-libs/gcc11-libs-11.3.0-5-x86_64.pkg.tar.zst"

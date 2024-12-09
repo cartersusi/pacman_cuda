@@ -1,1 +1,4 @@
-installer.sh
+main.go
+
+debug/
+target/
