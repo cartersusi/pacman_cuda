@@ -61,36 +61,21 @@ fn main() {
 
         data.start();
 
-        let versions = &["Recent", "Compatible"];
-        let versions = Select::with_theme(&ColorfulTheme::default())
-            .with_prompt("Would you like to install the recent or compatible version?")
-            .items(&versions[..])
-            .default(0)
-            .interact()
-            .expect("Failed to get user choice");
-
-        let c = versions + 1;
-        log(Lvl::Standard, &format!("\nSupporting packages for `{}` version:", CHOICES[c as usize - 1]));
-        let deps = match c {
-            1 => &data.recent,
-            2 => &data.compatible,
+        let version = get_choice("Recent", "Compatible", "Would you like to install the recent or compatible version?");
+        log(Lvl::Standard, &format!("\nSupporting packages for `{}` version:", CHOICES[version]));
+        let deps = match version {
+            0 => &data.recent,
+            1 => &data.compatible,
             _ => {
                 log(Lvl::Error, "Invalid Choice");
-                panic!();
+                panic!("Unknown Error Occurred");
             }
         };
 
         deps.print_support();
 
-        let cont = &["Yes", "No"];
-        let cont = Select::with_theme(&ColorfulTheme::default())
-            .with_prompt("Would you like to proceed with the installation?")
-            .items(&cont[..])
-            .default(0)
-            .interact()
-            .expect("Failed to get user choice");
-
-        if cont == 1 {
+        let proceed = get_choice("Yes", "No", "Would you like to proceed with the installation?");
+        if proceed == 1 {
             end(true);
         }
 
@@ -177,6 +162,18 @@ impl Deps {
             Err(error) => log(Lvl::Error, &format!(" Packages were not installed successfully: {}", error)),
         }
     }
+}
+
+fn get_choice(c1: &str, c2: &str, prompt: &str) -> usize {
+    let choices = &[c1, c2];
+    let choice = Select::with_theme(&ColorfulTheme::default())
+        .with_prompt(prompt)
+        .items(&choices[..])
+        .default(0)
+        .interact()
+        .expect("Failed to get user choice");
+
+    choice
 }
 
 fn run(cmd: &str, interactive: bool) -> Result<String, String> {
